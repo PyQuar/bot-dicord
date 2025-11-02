@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import os
 
 # Create bot with intents
 intents = discord.Intents.default()
@@ -33,5 +34,8 @@ async def on_presence_update(before, after):
         if channel:
             await channel.send("#BOYCOTTBOHMID")
 
-bot.run("os.getenv("DISCORD_TOKEN")")
+
+bot.run(os.getenv("DISCORD_TOKEN"))
+
+
 
