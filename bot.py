@@ -33,4 +33,5 @@ async def on_presence_update(before, after):
         if channel:
             await channel.send("#BOYCOTTBOHMID")
 
-bot.run("DISCORD_TOKEN")
+bot.run("os.getenv("DISCORD_TOKEN")")
+
